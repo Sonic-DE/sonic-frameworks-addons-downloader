@@ -7,6 +7,8 @@ set(KF_VERSION "6.28.0") # handled by release scripts
 set(KF_DEP_VERSION "6.28.0") # handled by release scripts
 project(KNewStuff VERSION ${KF_VERSION})
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 include(FeatureSummary)
