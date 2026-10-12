@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: KDE Contributors
 # SPDX-License-Identifier: BSD-2-Clause
 
-cmake_minimum_required(VERSION 3.29)
+cmake_minimum_required(VERSION 3.30)
 
 set(KF_VERSION "6.30.0") # handled by release scripts
 set(KF_DEP_VERSION "6.30.0") # handled by release scripts
@@ -25,7 +25,7 @@ include(ECMQmlModule)
 include(ECMQtDeclareLoggingCategory)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 
-set(REQUIRED_QT_VERSION 6.9.0)
+set(REQUIRED_QT_VERSION 6.10.0)
 find_package(Qt6 ${REQUIRED_QT_VERSION} NO_MODULE REQUIRED COMPONENTS Gui Widgets Xml Qml Quick QuickWidgets)
 find_package(KF6Archive ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6Config ${KF_DEP_VERSION} REQUIRED)
@@ -40,6 +40,7 @@ include(ECMGenerateHeaders)
 include(ECMDeprecationSettings)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
+include(ECMInstalledLibraryCheck)
 include(CMakeDependentOption)
 
 find_package(KF6Attica ${KF_DEP_VERSION} CONFIG REQUIRED)
